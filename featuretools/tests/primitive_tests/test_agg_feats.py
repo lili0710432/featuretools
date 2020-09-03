@@ -347,6 +347,7 @@ def test_copy(games_es):
 
 
 def test_serialization(es):
+    # --> add a multi output test?
     primitives_deserializer = PrimitivesDeserializer()
     value = ft.IdentityFeature(es['log']['value'])
     primitive = ft.primitives.Max()

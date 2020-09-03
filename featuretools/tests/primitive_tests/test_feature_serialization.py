@@ -95,6 +95,7 @@ def test_pickle_features_with_custom_primitive(pd_es, tmpdir):
 
 
 def test_serialized_renamed_features(es):
+    # --> fix now that multi feature is fixed
     def serialize_name_unchanged(original):
         new_name = 'MyFeature'
         original_names = original.get_feature_names()
@@ -254,3 +255,15 @@ def test_serialize_url(es):
     error_text = "Writing to URLs is not supported"
     with pytest.raises(ValueError, match=error_text):
         ft.save_features(features_original, URL)
+
+
+def test_multi_output_features(es):
+    # --> maybe here? not sure what we'd actually assert other than that it works
+
+    features = ft.dfs(entityset=es,
+                      target_entity="sessions",
+                      trans_primitives=[],
+                      agg_primitives=[NMostCommon],
+                      max_depth=2,
+                      features_only=True)
+    ft.save_features(features)
