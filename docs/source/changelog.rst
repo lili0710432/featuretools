@@ -5,13 +5,11 @@ Changelog
 **Future Release**
     * Enhancements
     * Fixes
-        * Allow FeatureOutputSlice features to be serialized (:pr:`1050`)
     * Changes
     * Documentation Changes
     * Testing Changes
      
     Thanks to the following people for contributing to this release:
-    :user:`tamargrey`
 
 
 **v0.19.0 Sept 8, 2020**
