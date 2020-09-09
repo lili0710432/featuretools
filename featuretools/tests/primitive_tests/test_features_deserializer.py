@@ -28,7 +28,6 @@ def test_single_feature(es):
 
 
 def test_multioutput_feature(es):
-    # --> fix now that we fixed multi output
     value = ft.IdentityFeature(es['log']['product_id'])
     threecommon = ft.primitives.NMostCommon()
     tc = ft.Feature(es['log']['product_id'], parent_entity=es["sessions"], primitive=threecommon)

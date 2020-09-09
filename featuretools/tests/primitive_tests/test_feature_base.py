@@ -236,5 +236,3 @@ def test_rename_featureoutputslice(es):
     new_name = 'session_test'
     new_names = ['session_test']
     check_rename(feat, new_name, new_names)
-
-# --> Maybe add a test that get arguments is what is expected or something more general than just testing multioutput featres?
